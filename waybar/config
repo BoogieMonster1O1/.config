@@ -1,0 +1,88 @@
+// -*- mode: json -*-
+
+{
+	"layer": "bottom",
+	"position": "top",
+
+	"modules-left": ["sway/workspaces", "sway/mode", "sway/window"],
+	"modules-center": ["clock"],
+	"modules-right": [
+		"memory",
+	    "cpu",
+	    "disk",
+		"pulseaudio",
+		"battery",
+		"network",
+		"tray"
+	],
+
+    "sway/workspaces": {
+         "disable-scroll": true,
+         "disable-markup" : false,
+         "all-outputs": true,
+         "format": "  {icon}  ",
+         "format-icons": {
+             "1": "",
+             "2": "",
+             "3": "",
+             "default": ""
+         }
+    },
+
+    "sway/mode": {
+        "format": "<span style=\"italic\">{}</span>"
+    },
+
+    "tray": {
+        "icon-size": 20,
+        "spacing": 20
+    },
+
+    "clock": {
+        "format-alt": "{:%Y-%m-%d %H:%M}",
+        "format": "{:%a, %B %d, %Y %H:%M}"
+    },
+    "memory": {
+        "format": "M {}% "
+    },
+    "cpu": {
+        "format": " {usage}% "
+    },
+    "disk": {
+	      "interval": 30,
+	      "format": " {percentage_free}%  ",
+    },
+    "battery": {
+        "states": {
+            "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon} {capacity}% ",
+        "format-icons": ["", "", "", "", ""]
+    },
+    "battery#bat2": {
+        "bat": "BAT2"
+    },
+    "network": {
+        "format-wifi": " {signalStrength}% ",
+        "format-ethernet": "{ifname}: {ipaddr}/{cidr} ",
+        "format-disconnected": "Disconnected ⚠",
+        "interval" : 10
+    },
+    "pulseaudio": {
+        "scroll-step": 1,
+        "format": "{icon} {volume}% ",
+        "format-bluetooth": "{icon}{volume}% ",
+        "format-muted": "",
+        "format-icons": {
+            "headphones": "",
+            "handsfree": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", ""]
+        },
+    }
+}
