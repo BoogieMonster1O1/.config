@@ -1,0 +1,26 @@
+# -*- mode: gitignore; -*-
+
+/*
+
+!/sway/
+!/sway-interactive-screenshot/
+!/waybar/
+!/gtk-3.0/
+!/gtk-4.0/
+!/fish/
+!/qt5ct/
+!/environment.d/
+!/neofetch/
+
+!/README.md
+!.gitignore
+
+.DS_Store
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
