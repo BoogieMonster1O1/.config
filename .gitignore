@@ -11,6 +11,7 @@
 !/qt5ct/
 !/environment.d/
 !/neofetch/
+!/gh/
 
 !/README.md
 !.gitignore
