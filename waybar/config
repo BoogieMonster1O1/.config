@@ -10,9 +10,10 @@
 		"memory",
 	    "cpu",
 	    "disk",
-		"pulseaudio",
+	    "pulseaudio#out",
 		"battery",
-		"network",
+	    "network",
+	    "pulseaudio#in",
 		"tray"
 	],
 
@@ -24,7 +25,7 @@
          "format-icons": {
              "1": "",
              "2": "",
-             "3": "",
+             "3": "",
              "default": ""
          }
     },
@@ -67,13 +68,13 @@
     "network": {
         "format-wifi": " {signalStrength}% ",
         "format-ethernet": "{ifname}: {ipaddr}/{cidr} ",
-        "format-disconnected": "Disconnected ⚠",
+        "format-disconnected": "Nope ⚠",
         "interval" : 10
     },
-    "pulseaudio": {
+    "pulseaudio#out": {
         "scroll-step": 1,
-        "format": "{icon} {volume}% ",
-        "format-bluetooth": "{icon}{volume}% ",
+        "format": "{icon} {volume}%",
+        "format-bluetooth": "{icon}{volume}%",
         "format-muted": "",
         "format-icons": {
             "headphones": "",
@@ -84,5 +85,12 @@
             "car": "",
             "default": ["", ""]
         },
+    },
+    "pulseaudio#in": {
+	"format": "{format_source}",
+	"on-click": "pactl set-source-mute @DEFAULT_SOURCE@ toggle",
+	"format-source": "",
+	"format-source-muted": "",
+	"scroll-step": 1
     }
 }

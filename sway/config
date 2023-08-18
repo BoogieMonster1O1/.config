@@ -196,13 +196,32 @@ input "1452:657:bcm5974" {
     bindsym $mod+Shift+minus move scratchpad
     bindsym $mod+minus scratchpad show
 
-    bindsym XF86AudioRaiseVolume exec amixer set Master 5%+ | sed -En 's/.*\[([0-9]+)%\].*/\1/p' | head -1 > $WOBSOCK
-    bindsym XF86AudioLowerVolume exec amixer set Master 5%- | sed -En 's/.*\[([0-9]+)%\].*/\1/p' | head -1 > $WOBSOCK
-    bindsym XF86AudioMute exec amixer sset Master toggle | sed -En '/\[on\]/ s/.*\[([0-9]+)%\].*/\1/ p; /\[off\]/ s/.*/0/p' | head -1 > $WOBSOCK
-
-    bindsym XF86MonBrightnessUp exec brightnessctl set +5% | sed -En 's/.*\(([0-9]+)%\).*/\1/p' > $WOBSOCK
-    bindsym Shift+XF86MonBrightnessUp exec brightnessctl set 5%- | sed -En 's/.*\(([0-9]+)%\).*/\1/p' > $WOBSOCK
+    # F1 / Lower Brightness
     bindsym XF86MonBrightnessDown exec brightnessctl set 5%- | sed -En 's/.*\(([0-9]+)%\).*/\1/p' > $WOBSOCK
+    # F2 / Raise Brightness
+    bindsym XF86MonBrightnessUp exec brightnessctl set +5% | sed -En 's/.*\(([0-9]+)%\).*/\1/p' > $WOBSOCK
+    # s-F1 / Lower Brightness
+    bindsym Shift+XF86MonBrightnessUp exec brightnessctl set 5%- | sed -En 's/.*\(([0-9]+)%\).*/\1/p' > $WOBSOCK
+    # F4 / Dmenu
+    bindsym XF86LaunchB exec $menu
+    # F5 / Lower Keyboard Backlight
+    bindsym XF86KbdBrightnessDown exec brightnessctl --device='smc::kbd_backlight' set 6.25%- | sed -En 's/.*\(([0-9]+)%\).*/\1/p' > $WOBSOCK
+    # F6 / Raise Keyboard Backlight
+    bindsym XF86KbdBrightnessUp exec brightnessctl --device='smc::kbd_backlight' set +6.25% | sed -En 's/.*\(([0-9]+)%\).*/\1/p' > $WOBSOCK
+    # F7 / Backward
+    bindsym XF86AudioPrev exec playerctl previous
+    # F8 / Play - Pause
+    bindsym XF86AudioPlay exec playerctl play-pause
+    # F9 / Forward
+    bindsym XF86AudioNext exec playerctl next
+    # F10 / Speaker Mute
+    bindsym XF86AudioMute exec amixer sset Master toggle | sed -En '/\[on\]/ s/.*\[([0-9]+)%\].*/\1/ p; /\[off\]/ s/.*/0/p' | head -1 > $WOBSOCK
+    # s-F10 / Microphone Mute
+    bindsym Shift+XF86AudioMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
+    # F11 / Lower Volume
+    bindsym XF86AudioLowerVolume exec amixer set Master 5%- | sed -En 's/.*\[([0-9]+)%\].*/\1/p' | head -1 > $WOBSOCK
+    # F12 / Raise Volume
+    bindsym XF86AudioRaiseVolume exec amixer set Master 5%+ | sed -En 's/.*\[([0-9]+)%\].*/\1/p' | head -1 > $WOBSOCK
     
 #
 # Resizing containers:
