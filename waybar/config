@@ -91,6 +91,6 @@
 	"on-click": "pactl set-source-mute @DEFAULT_SOURCE@ toggle",
 	"format-source": "",
 	"format-source-muted": "",
-	"scroll-step": 1
+	"scroll-step": 0
     }
 }
