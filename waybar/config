@@ -73,6 +73,7 @@
     },
     "pulseaudio#out": {
         "scroll-step": 1,
+	"on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
         "format": "{icon} {volume}%",
         "format-bluetooth": "{icon}{volume}%",
         "format-muted": "",
