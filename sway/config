@@ -22,8 +22,10 @@ smart_gaps on
 for_window [class="Emacs"] opacity 0.9
 
 assign [class="discord"] 1
+assign [app_id="discord"] 1
 assign [class="Emacs"] 2
 assign [app_id="firefox"] 3
+assign [class="osgViewer"] 5
 
 blur enable
 blur_passes 1
