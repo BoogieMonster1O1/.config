@@ -152,6 +152,8 @@ input "1452:657:bcm5974" {
     bindsym $mod+Alt+9 move container to workspace number 9
     bindsym $mod+Alt+0 move container to workspace number 10
 
+    bindsym $mod+Home workspace prev
+    bindsym $mod+End workspace next
 
     bindgesture swipe:right workspace prev
     bindgesture swipe:left workspace next
