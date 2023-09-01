@@ -109,9 +109,7 @@ input "1452:657:bcm5974" {
     bindsym $mod+Shift+c reload
 
     # Exit sway (logs you out of your Wayland session)
-    bindsym $mod+Shift+x exec swaynag -t warning -m 'sleepy time?' -B 'yep' 'swaymsg exit'
-
-    
+    bindsym $mod+Shift+x exec swaynag -t warning -m 'sleepy time?' -B 'yep' 'swaymsg exit'    
 
 #
 # Moving around:
@@ -153,9 +151,6 @@ input "1452:657:bcm5974" {
 
     bindsym $mod+Home workspace prev
     bindsym $mod+End workspace next
-
-    bindgesture swipe:right workspace prev
-    bindgesture swipe:left workspace next
 
 # Screenshots
     bindsym $mod+Shift+5 exec sway-interactive-screenshot
