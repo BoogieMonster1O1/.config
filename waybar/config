@@ -46,10 +46,12 @@
         "format": "{:%a, %B %d, %Y %H:%M}"
     },
     "memory": {
-        "format": "M {}% "
+        "format": " {}% ",
+	"on-click": "swaymsg workspace 4; exec gnome-system-monitor"
     },
     "cpu": {
-        "format": " {usage}% "
+        "format": " {usage}% ",
+	"on-click": "swaymsg workspace 4; exec gnome-system-monitor"
     },
     "disk": {
 	      "interval": 30,
@@ -70,7 +72,7 @@
     "network": {
         "format-wifi": " {signalStrength}% ",
         "format-ethernet": "{ifname}: {ipaddr}/{cidr} ",
-        "format-disconnected": "Nope ⚠",
+        "format-disconnected": "Cope ⚠",
         "interval" : 10
     },
     "pulseaudio#out": {

@@ -45,7 +45,6 @@ set $term gnome-terminal
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
 set $menu dmenu_path | dmenu | xargs swaymsg exec --
-
 floating_modifier $mod
 
 ### Output configuration
@@ -204,7 +203,7 @@ input "1452:657:bcm5974" {
     bindsym XF86MonBrightnessDown exec brightnessctl set 5%- | sed -En 's/.*\(([0-9]+)%\).*/\1/p' > $WOBSOCK
     # F2 / Raise Brightness
     bindsym XF86MonBrightnessUp exec brightnessctl set +5% | sed -En 's/.*\(([0-9]+)%\).*/\1/p' > $WOBSOCK
-    # s-F1 / Lower Brightness
+    # S-F1 / Lower Brightness
     bindsym Shift+XF86MonBrightnessUp exec brightnessctl set 5%- | sed -En 's/.*\(([0-9]+)%\).*/\1/p' > $WOBSOCK
     # F4 / Dmenu
     bindsym XF86LaunchB exec $menu
@@ -220,7 +219,7 @@ input "1452:657:bcm5974" {
     bindsym XF86AudioNext exec playerctl next
     # F10 / Speaker Mute
     bindsym XF86AudioMute exec amixer sset Master toggle | sed -En '/\[on\]/ s/.*\[([0-9]+)%\].*/\1/ p; /\[off\]/ s/.*/0/p' | head -1 > $WOBSOCK
-    # s-F10 / Microphone Mute
+    # S-F10 / Microphone Mute
     bindsym Shift+XF86AudioMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
     # F11 / Lower Volume
     bindsym XF86AudioLowerVolume exec amixer set Master 5%- | sed -En 's/.*\[([0-9]+)%\].*/\1/p' | head -1 > $WOBSOCK
