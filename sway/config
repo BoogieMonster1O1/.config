@@ -32,6 +32,8 @@ blur_passes 1
 
 shadows enable
 shadows_on_csd enable
+shadow_blur_radius 40
+default_dim_inactive 0.05
 # corner_radius 10
 
 ### Variables
@@ -45,6 +47,7 @@ set $term gnome-terminal
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
 set $menu dmenu_path | dmenu | xargs swaymsg exec --
+set $fancy_menu wofi --show=drun
 floating_modifier $mod
 
 ### Output configuration
@@ -198,8 +201,8 @@ input "1452:657:bcm5974" {
     bindsym XF86MonBrightnessUp exec brightnessctl set +5% | sed -En 's/.*\(([0-9]+)%\).*/\1/p' > $WOBSOCK
     # S-F1 / Lower Brightness
     bindsym Shift+XF86MonBrightnessUp exec brightnessctl set 5%- | sed -En 's/.*\(([0-9]+)%\).*/\1/p' > $WOBSOCK
-    # F4 / Dmenu
-    bindsym XF86LaunchB exec $menu
+    # F4 / Wofi
+    bindsym XF86LaunchB exec $fancy_menu
     # F5 / Lower Keyboard Backlight
     bindsym XF86KbdBrightnessDown exec brightnessctl --device='smc::kbd_backlight' set 6.25%- | sed -En 's/.*\(([0-9]+)%\).*/\1/p' > $WOBSOCK
     # F6 / Raise Keyboard Backlight
