@@ -236,7 +236,7 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
-bindsym $mod+x exec swaylock -c 1a1a1a
+bindsym $mod+x exec swaylock -c 000000
 bindsym $mod+Shift+e exec wofi-emoji
 
 include @sysconfdir@/sway/config.d/*
