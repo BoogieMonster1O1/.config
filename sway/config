@@ -34,6 +34,9 @@ shadows enable
 shadows_on_csd enable
 shadow_blur_radius 40
 default_dim_inactive 0.05
+
+scratchpad_minimize enable
+
 # corner_radius 10
 
 ### Variables
