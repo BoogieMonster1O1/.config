@@ -40,8 +40,6 @@ shadows enable
 shadows_on_csd enable
 shadow_blur_radius 40
 
-scratchpad_minimize enable
-
 # corner_radius 10
 
 ### Variables
@@ -87,7 +85,7 @@ output * bg ~/Downloads/wallpaperflare.com_wallpaper.jpg fill
 # Example configuration:
 #
 input "1452:657:bcm5974" {
-    dwt enabled
+    dwt disabled
     tap enabled
     natural_scroll enabled
     middle_emulation disabled
