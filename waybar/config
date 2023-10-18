@@ -71,7 +71,7 @@
     },
     "network": {
         "format-wifi": " {signalStrength}% ",
-        "format-ethernet": "",
+        "format-ethernet": " ",
         "format-disconnected": "Cope ⚠",
         "interval" : 10
     },
