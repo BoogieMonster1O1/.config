@@ -33,13 +33,6 @@ assign [class="Emacs"] 2
 assign [app_id="firefox"] 3
 assign [class="osgViewer"] 5
 
-blur enable
-blur_passes 1
-
-shadows enable
-shadows_on_csd enable
-shadow_blur_radius 40
-
 # corner_radius 10
 
 ### Variables
