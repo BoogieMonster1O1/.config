@@ -223,7 +223,7 @@ input "1452:657:bcm5974" {
     bindsym XF86AudioLowerVolume exec amixer set Master 5%- | sed -En 's/.*\[([0-9]+)%\].*/\1/p' | head -1 > $WOBSOCK
     # F12 / Raise Volume
     bindsym XF86AudioRaiseVolume exec amixer set Master 5%+ | sed -En 's/.*\[([0-9]+)%\].*/\1/p' | head -1 > $WOBSOCK
-    
+     
 #
 # Resizing containers:
 #
