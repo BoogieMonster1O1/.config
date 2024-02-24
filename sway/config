@@ -20,7 +20,6 @@ smart_gaps on
 
 # for_window [class="discord"] opacity 0.95
 for_window [class="Emacs"] opacity 0.9
-for_window [class="jetbrains-studio" title="Welcome to Android Studio"] floating enable
 for_window [app_id="org.gnome.Calculator"] floating enable
 for_window [app_id="com.github.finefindus.eyedropper"] floating enable
 for_window [app_id="io.github.fkinoshita.Telegraph"] floating enable
@@ -46,13 +45,14 @@ set $term gnome-terminal
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
 set $menu dmenu_path | dmenu | xargs swaymsg exec --
+#set $menu wofi --show=run
 set $fancy_menu wofi --show=drun
 floating_modifier $mod
 
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in @datadir@/backgrounds/sway/)
-output * bg ~/Downloads/wallpaperflare.com_wallpaper.jpg fill
+#output * bg ~/Downloads/wallpaperflare.com_wallpaper.jpg fill
 #
 # Example configuration:
 #
@@ -143,24 +143,24 @@ input "1452:657:bcm5974" {
     bindsym $mod+9 workspace number 9
     bindsym $mod+0 workspace number 10
 
-    bindsym $mod+Alt+1 move container to workspace number 1
-    bindsym $mod+Alt+2 move container to workspace number 2
-    bindsym $mod+Alt+3 move container to workspace number 3
-    bindsym $mod+Alt+4 move container to workspace number 4
-    bindsym $mod+Alt+5 move container to workspace number 5
-    bindsym $mod+Alt+6 move container to workspace number 6
-    bindsym $mod+Alt+7 move container to workspace number 7
-    bindsym $mod+Alt+8 move container to workspace number 8
-    bindsym $mod+Alt+9 move container to workspace number 9
-    bindsym $mod+Alt+0 move container to workspace number 10
+    bindsym $mod+Shift+1 move container to workspace number 1
+    bindsym $mod+Shift+2 move container to workspace number 2
+    bindsym $mod+Shift+3 move container to workspace number 3
+    bindsym $mod+Shift+4 move container to workspace number 4
+    bindsym $mod+Shift+5 move container to workspace number 5
+    bindsym $mod+Shift+6 move container to workspace number 6
+    bindsym $mod+Shift+7 move container to workspace number 7
+    bindsym $mod+Shift+8 move container to workspace number 8
+    bindsym $mod+Shift+9 move container to workspace number 9
+    bindsym $mod+Shift+0 move container to workspace number 10
 
     bindsym $mod+Home workspace prev
     bindsym $mod+End workspace next
 
 # Screenshots
-    bindsym $mod+Shift+5 exec sway-interactive-screenshot
-    bindsym $mod+Shift+4 exec sway-interactive-screenshot -s region
-    bindsym $mod+Shift+3 exec sway-interactive-screenshot -s focused-output
+    #bindsym $mod+Shift+5 exec sway-interactive-screenshot
+    #bindsym $mod+Shift+4 exec sway-interactive-screenshot -s region
+    #bindsym $mod+Shift+3 exec sway-interactive-screenshot -s focused-output
 
 #
 # Layout stuff:

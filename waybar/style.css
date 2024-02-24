@@ -4,10 +4,9 @@
 }
 
 window#waybar {
-    background-color: rgba(0, 0, 0, 0);
-    
-    /*background-color: rgba(43, 48, 59, 0.5);
-    border-bottom: 0px solid rgba(100, 114, 125, 0.5);*/
+    /*background-color: rgba(0, 0, 0, 1.0);
+    background-color: rgba(43, 48, 59, 0.5);*/
+    background-color: #1a1a1a;
     border-bottom: none;
     color: #bbbbbb;
     transition-property: background-color;
@@ -43,7 +42,7 @@ button:hover {
 #workspaces button {
     padding: 0 5px;
     background-color: transparent;
-    color: #bbbbbb;
+    color: #eeeeee;
 }
 
 #workspaces button:hover {
@@ -61,7 +60,7 @@ button:hover {
 
 #mode {
     background-color: #64727D;
-    border-bottom: 3px solid #bbbbbb;
+    border-bottom: 3px solid #eeeeee;
 }
 
 #clock,
@@ -82,7 +81,7 @@ button:hover {
 #mpd {
     padding: 0 10px;
     margin: 0 4px;
-    color: #bbbbbb;
+    color: #ffffff;
     border-radius: 4px;
 }
 
@@ -171,10 +170,10 @@ label:focus {
     background-color: #f53c3c
 }
 
-#wireplumber {
+/*#wireplumber {
     background-color: #fff0f5;
     color: #000000;
-}
+}*/
 
 #wireplumber.muted {
     background-color: #f53c3c;
