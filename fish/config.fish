@@ -3,6 +3,7 @@ if status is-interactive
 end
 
 set -x PATH /home/shrish/.emacs.d/bin $PATH
+set -x MOZ_ENABLE_WAYLAND 1
 set -x GPG_TTY (tty)
 
 alias mountmac 'sudo apfs-fuse -o allow_other -v 6 /dev/sda2 /mnt/macdata'
